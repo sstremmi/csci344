@@ -8,5 +8,9 @@ function changeColor(selector, color) {
 }
 
 function reset() {
-    document.getElementsByClassName('my-section').style.backgroundColor = "transparent";
+    const all = document.querySelectorAll('.my-section');
+    all.forEach((el) => {
+        el.style.backgroundColor = '';  // Use empty string to reset the background color
+    });
+    console.log('reset');
 }
